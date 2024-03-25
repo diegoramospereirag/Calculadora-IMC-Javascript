@@ -1,0 +1,221 @@
+/* Importação da fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  text-align: center;
+  color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-iphone {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.description h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.price h5 {
+  text-decoration: line-through;
+  color: #666666;
+}
+
+.price h2 {
+  color: #FFA500;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.selectColor h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.charge {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.charge div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 998;
+}
+
+.black { background-color: #333333; }
+.pink { background-color: #FFC0CB; }
+.green { background-color: #90EE90; }
+.blue { background-color: #B0C4DE; }
+.yellow { background-color: #FFFF00; }
+
+.button-cart button,
+.details button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-cart button:hover,
+.details button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-
+  50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.modal-header {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #333333;
+}
+
+.modal-body {
+  color: #666666;
+}
+
+.modal-footer {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-footer .btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.close {
+  color: #333333;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.icon i {
+  color: #FFA500;
+  top: 0;
+  position: absolute;
+  right: 0;
+  font-size: 50px;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.cart {
+  position: absolute;
+  margin: 2%;
+  top: 0;
+  left: 0;
+}
+
+.cart i {
+  color: #007bff;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+#item-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #007bff;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculador</h1>
+    <input type="text" name="num1" id="num1">
+    <br>
+    <br>
+    <input type="text" name="num2" id="num2">
+    <br>
+    <br>
+    <input type="radio" name="valor" id="add">
+    <label>Somar</label>
+    <input type="radio" name="valor" id="sub">
+    <label>Diminuir</label>
+    <input type="radio" name="valor" id="multi">
+    <label>Multiplicar</label>
+    <input type="radio" name="valor" id="divi">
+    <label>Dividir</label>
+<br>
+<br>
+  <button id="button" onclick="calculate()" onchange="calculate()">Calcular</button>
+  <br>
+  <h1 id="resultArea"></h1>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cards Product</title>
+  <script src="script.js"></script>
+</head>
+
+<body onload="updateCartCount()">
+  <div class="icon" id="toggle" onclick="bodyColor()">
+    <i class="fa-solid fa-toggle-off"></i>
+  </div>
+  <div class="cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="item-count">0</span>
+  </div>
+  <div class="cards-container">
+    <div class="card">
+      <img src="img/Black.png" class="img-iphone" id="cardBannerIphone" alt="black-iphone">
+      <div class="description">
+        <h1>Apple iPhone 15 128GB Preto 6,1" 48MP iOS 5G</h1>
+      </div>
+      <div class="price">
+        <h5>R$ 8.865,00</h5>
+        <h2>R$ 5.642,00</h2>
+      </div>
+      <div class="selectColor">
+        <h1>Selecione a Cor</h1>
+        <div class="charge">
+          <div class="black" onclick="chargeColorsIphone('black')"></div>
+          <div class="pink" onclick="chargeColorsIphone('pink')"></div>
+          <div class="green" onclick="chargeColorsIphone('green')"></div>
+          <div class="blue" onclick="chargeColorsIphone('blue')"></div>
+          <div class="yellow" onclick="chargeColorsIphone('yellow')"></div>
+        </div>
+      </div>
+      <div class="button-cart">
+        <button onclick="openModalCart(), addItemCart()">Adicionar ao Carrinho</button>
+      </div>
+      <div class="details">
+        <button onclick="toggleProductDetails()">Ver detalhes do Produto</button>
+      </div>
+      <div class="message"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="boxmodal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Confirmação de Adição ao Carrinho</h5>
+        </div>
+        <div class="modal-body">
+          <p><strong>Sucesso!</strong> Seu item foi adicionado ao carrinho com êxito.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="goToCart()">Ver Carrinho</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModalCart()">Continuar Navegando</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/1998985285.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

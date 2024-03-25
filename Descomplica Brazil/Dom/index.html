@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!--   <script>
+  function exemploEvento(){
+    alert('Mostrando o Resultado')
+  }
+
+  function passarMousePorCima(){
+    document.getElementById('exemplo').innerHTML = 'Evento com mouse Hover'
+
+  }
+
+  function Mouseout(){
+    document.getElementById('exemplo').innerHTML = 'Evento com mouse Out'
+  }
+  </script>
+<h1>Clique no Botão e veja o Resultado</h1>
+<form>
+  <input type="button" onclick="exemploEvento()" value="Apresentar">
+</form>
+
+<h1 id="exemplo" onmouseover="passarMousePorCima()" onmouseout="Mouseout()">Troca texto</h1>
+ -->
+
+ <form name="formCadastro" onsubmit="validarForm()">
+  <label>Email</label>
+  <input type="email" name="Email" id="email">
+  <label>Nome</label>
+  <input type="text"  id="nome">
+
+  <button type="submit" onclick="novoItem()">Cadastrar</button>
+ </form>
+ <h1 id="name"></h1>
+ <script>
+  function validarForm(){
+    let nomePessoa = document.forms['formCadastro']['nome'].value
+    if(nomePessoa == ''){
+ 
+      alert('Preencha o campo!')    
+    event.preventDefault()
+    }else{
+      document.getElementById('name').innerHTML = ('Olá, '+ nomePessoa)
+      event.preventDefault()
+    }
+  }
+   </script>
+
+</body>
+</html>
